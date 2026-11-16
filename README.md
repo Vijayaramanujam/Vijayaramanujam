@@ -55,7 +55,7 @@
 ### 📊 Skills & Proficiency Breakdown
 
 <div align="center">
-  <img src="assets/skills-bento.svg" width="100%" alt="Technologies I Master"/>
+  <img src="assets/skills-bento-grid.svg" width="100%" alt="Technologies I Master"/>
 </div>
 
 <br/>

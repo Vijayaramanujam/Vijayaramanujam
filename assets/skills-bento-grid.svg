@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="460" viewBox="0 0 850 460">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#090d16"/>
+      <stop offset="50%" style="stop-color:#0d121f"/>
+      <stop offset="100%" style="stop-color:#070a12"/>
+    </linearGradient>
+
+    <!-- App Card Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161d2d;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0e1320;stop-opacity:0.98"/>
+    </linearGradient>
+
+    <!-- Glowing Pill Gradients -->
+    <linearGradient id="glowPillCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f5d4;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0.12"/>
+    </linearGradient>
+    <linearGradient id="glowPillPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:0.12"/>
+    </linearGradient>
+    <linearGradient id="glowPillPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f472b6;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#fb7185;stop-opacity:0.12"/>
+    </linearGradient>
+    <linearGradient id="glowPillGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.12"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.95; } }
+    .pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="850" height="460" rx="14" fill="url(#bg)" stroke="#1e293b" stroke-width="1.2"/>
+
+  <!-- Ambient light blobs in background -->
+  <circle cx="120" cy="90" r="120" fill="#818cf8" opacity="0.06"/>
+  <circle cx="730" cy="380" r="140" fill="#00f5d4" opacity="0.05"/>
+
+  <!-- Header Section -->
+  <g transform="translate(45, 36)">
+    <text x="0" y="0" class="font-mono" font-size="10" font-weight="700" fill="#818cf8" letter-spacing="2">
+      SKILLS ARCHITECTURE
+    </text>
+    <text x="0" y="24" class="font-sans" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.3">
+      Technologies &amp; Engineering Arsenal
+    </text>
+    <text x="0" y="44" class="font-sans" font-size="12" fill="#94a3b8">
+      Categorized ecosystem of frameworks, machine learning models, and cloud technologies I build with.
+    </text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4 SOLID BENTO APP TILES (2x2 Grid)                              -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- TILE 1: ARTIFICIAL INTELLIGENCE & LLMS (Top-Left) -->
+  <g transform="translate(45, 105)">
+    <rect width="365" height="155" rx="12" fill="url(#cardBg)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.5"/>
+    
+    <!-- Header with Icon & Title -->
+    <g transform="translate(18, 20)">
+      <rect width="28" height="28" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-width="0.8"/>
+      <text x="14" y="19" font-size="15" text-anchor="middle">🧠</text>
+      <text x="38" y="18" class="font-sans" font-size="14" font-weight="700" fill="#ffffff">Artificial Intelligence</text>
+      <text x="38" y="32" class="font-mono" font-size="9" fill="#818cf8">MULTI-AGENT · RAG · CV</text>
+    </g>
+
+    <!-- Modern Badge Pills -->
+    <g transform="translate(18, 66)">
+      <!-- Row 1 -->
+      <g>
+        <rect width="138" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">🤖 Multi-Agent ADK</text>
+      </g>
+      <g transform="translate(146, 0)">
+        <rect width="108" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">⚡ Gemini API</text>
+      </g>
+      <g transform="translate(262, 0)">
+        <rect width="66" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">🔍 RAG</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 32)">
+        <rect width="112" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">🤗 Transformers</text>
+      </g>
+      <g transform="translate(120, 32)">
+        <rect width="86" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">👁️ OpenCV</text>
+      </g>
+      <g transform="translate(214, 32)">
+        <rect width="114" height="24" rx="12" fill="url(#glowPillPurple)" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0e7ff">📊 BGE Vectors</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- TILE 2: CORE LANGUAGES & DSA (Top-Right) -->
+  <g transform="translate(440, 105)">
+    <rect width="365" height="155" rx="12" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+    
+    <g transform="translate(18, 20)">
+      <rect width="28" height="28" rx="6" fill="#082f49" stroke="#38bdf8" stroke-width="0.8"/>
+      <text x="14" y="19" font-size="15" text-anchor="middle">💻</text>
+      <text x="38" y="18" class="font-sans" font-size="14" font-weight="700" fill="#ffffff">Programming &amp; Logic</text>
+      <text x="38" y="32" class="font-mono" font-size="9" fill="#38bdf8">564+ LEETCODE · 1738 PEAK</text>
+    </g>
+
+    <g transform="translate(18, 66)">
+      <!-- Row 1 -->
+      <g>
+        <rect width="88" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">🐍 Python</text>
+      </g>
+      <g transform="translate(96, 0)">
+        <rect width="78" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">☕ Java</text>
+      </g>
+      <g transform="translate(182, 0)">
+        <rect width="78" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">⚡ C++</text>
+      </g>
+      <g transform="translate(268, 0)">
+        <rect width="60" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">💾 SQL</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 32)">
+        <rect width="108" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">🌐 JavaScript</text>
+      </g>
+      <g transform="translate(116, 32)">
+        <rect width="112" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">🧩 Algorithms</text>
+      </g>
+      <g transform="translate(236, 32)">
+        <rect width="92" height="24" rx="12" fill="url(#glowPillCyan)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#e0f2fe">🏆 Contest</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- TILE 3: FULL STACK & WEB (Bottom-Left) -->
+  <g transform="translate(45, 275)">
+    <rect width="365" height="155" rx="12" fill="url(#cardBg)" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.5"/>
+    
+    <g transform="translate(18, 20)">
+      <rect width="28" height="28" rx="6" fill="#500724" stroke="#f472b6" stroke-width="0.8"/>
+      <text x="14" y="19" font-size="15" text-anchor="middle">🚀</text>
+      <text x="38" y="18" class="font-sans" font-size="14" font-weight="700" fill="#ffffff">Web &amp; Full Stack</text>
+      <text x="38" y="32" class="font-mono" font-size="9" fill="#f472b6">REACT · FASTAPI · NEXT.JS</text>
+    </g>
+
+    <g transform="translate(18, 66)">
+      <!-- Row 1 -->
+      <g>
+        <rect width="92" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">⚛️ React.js</text>
+      </g>
+      <g transform="translate(100, 0)">
+        <rect width="86" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">⚡ FastAPI</text>
+      </g>
+      <g transform="translate(194, 0)">
+        <rect width="84" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">▲ Next.js</text>
+      </g>
+      <g transform="translate(286, 0)">
+        <rect width="42" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="8" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">API</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 32)">
+        <rect width="94" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">📦 Node.js</text>
+      </g>
+      <g transform="translate(102, 32)">
+        <rect width="96" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">🔥 Streamlit</text>
+      </g>
+      <g transform="translate(206, 32)">
+        <rect width="122" height="24" rx="12" fill="url(#glowPillPink)" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#fdf2f8">🛠️ REST APIs</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- TILE 4: DATA SCIENCE & CLOUD (Bottom-Right) -->
+  <g transform="translate(440, 275)">
+    <rect width="365" height="155" rx="12" fill="url(#cardBg)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.5"/>
+    
+    <g transform="translate(18, 20)">
+      <rect width="28" height="28" rx="6" fill="#022c22" stroke="#34d399" stroke-width="0.8"/>
+      <text x="14" y="19" font-size="15" text-anchor="middle">☁️</text>
+      <text x="38" y="18" class="font-sans" font-size="14" font-weight="700" fill="#ffffff">Data Science &amp; Cloud</text>
+      <text x="38" y="32" class="font-mono" font-size="9" fill="#34d399">PANDAS · QDRANT · AWS</text>
+    </g>
+
+    <g transform="translate(18, 66)">
+      <!-- Row 1 -->
+      <g>
+        <rect width="92" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">🐼 Pandas</text>
+      </g>
+      <g transform="translate(100, 0)">
+        <rect width="84" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">🔢 NumPy</text>
+      </g>
+      <g transform="translate(192, 0)">
+        <rect width="136" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">🔴 Qdrant Vector</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 32)">
+        <rect width="98" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">🍃 MongoDB</text>
+      </g>
+      <g transform="translate(106, 32)">
+        <rect width="84" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">🐳 Docker</text>
+      </g>
+      <g transform="translate(198, 32)">
+        <rect width="130" height="24" rx="12" fill="url(#glowPillGreen)" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.6"/>
+        <text x="10" y="16" class="font-sans" font-size="10.5" font-weight="600" fill="#ecfdf5">☁️ AWS (Learning)</text>
+      </g>
+    </g>
+  </g>
+</svg>
