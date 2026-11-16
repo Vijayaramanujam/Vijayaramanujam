@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="230" viewBox="0 0 850 230">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#080b18"/>
+      <stop offset="100%" style="stop-color:#04060e"/>
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#121833;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0a0e20;stop-opacity:0.95"/>
+    </linearGradient>
+
+    <!-- Stat Icon Circles -->
+    <linearGradient id="iconIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4338ca"/>
+    </linearGradient>
+    <linearGradient id="iconCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+    <linearGradient id="iconPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="iconEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#047857"/>
+    </linearGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'Consolas', 'Courier New', monospace; }
+  </style>
+
+  <!-- Canvas -->
+  <rect width="850" height="230" rx="14" fill="url(#bg)"/>
+
+  <!-- ═════════ LEFT: ABOUT ME HEADLINE ═════════ -->
+  <g transform="translate(45, 45)">
+    <!-- Section Subtitle -->
+    <text x="0" y="0" class="font-mono" font-size="10" font-weight="700" fill="#6366f1" letter-spacing="2">
+      ABOUT ME
+    </text>
+
+    <!-- Main Headline -->
+    <text x="0" y="32" class="font-sans" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.3">
+      I'm passionate about
+    </text>
+    <text x="0" y="60" class="font-sans" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.3">
+      building intelligent systems
+    </text>
+
+    <!-- Paragraph -->
+    <text x="0" y="90" class="font-sans" font-size="12" fill="#94a3b8">
+      CSE student at Chennai Institute of Technology (CGPA: 9.52/10).
+    </text>
+    <text x="0" y="108" class="font-sans" font-size="12" fill="#94a3b8">
+      Obsessed with multi-agent architecture, RAG pipelines, and
+    </text>
+    <text x="0" y="126" class="font-sans" font-size="12" fill="#94a3b8">
+      scaling production software that solves high-impact problems.
+    </text>
+
+    <!-- Learn More Link -->
+    <g transform="translate(0, 148)">
+      <rect width="160" height="30" rx="6" fill="#131b34" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="14" y="19" class="font-sans" font-size="11" font-weight="600" fill="#c7d2fe">
+        Learn More About Me 👤
+      </text>
+    </g>
+  </g>
+
+  <!-- ═════════ RIGHT: 2x2 STATS CARDS (Exact Alex Layout) ═════════ -->
+  <g transform="translate(435, 30)">
+    <!-- Card 1: 564+ LeetCode (Top Left) -->
+    <g transform="translate(0, 0)" filter="url(#shadow)">
+      <rect width="182" height="78" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+      <!-- Icon -->
+      <rect x="16" y="18" width="42" height="42" rx="8" fill="url(#iconIndigo)"/>
+      <text x="37" y="44" font-size="18" text-anchor="middle">💻</text>
+      <!-- Stat Number & Label -->
+      <text x="70" y="38" class="font-sans" font-size="20" font-weight="800" fill="#ffffff">564+</text>
+      <text x="70" y="54" class="font-sans" font-size="10" font-weight="500" fill="#94a3b8">LeetCode Solved</text>
+    </g>
+
+    <!-- Card 2: 9.52 CGPA (Top Right) -->
+    <g transform="translate(198, 0)" filter="url(#shadow)">
+      <rect width="182" height="78" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="16" y="18" width="42" height="42" rx="8" fill="url(#iconCyan)"/>
+      <text x="37" y="44" font-size="18" text-anchor="middle">🎓</text>
+      <text x="70" y="38" class="font-sans" font-size="20" font-weight="800" fill="#ffffff">9.52</text>
+      <text x="70" y="54" class="font-sans" font-size="10" font-weight="500" fill="#94a3b8">CGPA / Top Rank</text>
+    </g>
+
+    <!-- Card 3: 1st Runner-Up (Bottom Left) -->
+    <g transform="translate(0, 92)" filter="url(#shadow)">
+      <rect width="182" height="78" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="16" y="18" width="42" height="42" rx="8" fill="url(#iconPurple)"/>
+      <text x="37" y="44" font-size="18" text-anchor="middle">🥈</text>
+      <text x="70" y="38" class="font-sans" font-size="18" font-weight="800" fill="#ffffff">5,000+</text>
+      <text x="70" y="54" class="font-sans" font-size="10" font-weight="500" fill="#94a3b8">Hackathon Teams</text>
+    </g>
+
+    <!-- Card 4: 1738 Rating (Bottom Right) -->
+    <g transform="translate(198, 92)" filter="url(#shadow)">
+      <rect width="182" height="78" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect x="16" y="18" width="42" height="42" rx="8" fill="url(#iconEmerald)"/>
+      <text x="37" y="44" font-size="18" text-anchor="middle">⚡</text>
+      <text x="70" y="38" class="font-sans" font-size="20" font-weight="800" fill="#ffffff">1738</text>
+      <text x="70" y="54" class="font-sans" font-size="10" font-weight="500" fill="#94a3b8">Peak Contest Rating</text>
+    </g>
+  </g>
+
+  <rect x="2" y="2" width="846" height="226" rx="12" fill="none" stroke="#6366f1" stroke-width="0.5" opacity="0.2"/>
+</svg>

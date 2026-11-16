@@ -1,246 +1,190 @@
 <!-- ╔══════════════════════════════════════════════════════════════════════╗ -->
 <!-- ║         VIJAYARAMANUJAM — Elite AI & Software Engineering Profile    ║ -->
-<!-- ║         Dark Cyberpunk · 3D Interactive Design · Ultra High-Impact   ║ -->
+<!-- ║         Theme: CodeCraft Luxury Dark / 3D Three.js Aesthetic        ║ -->
 <!-- ╚══════════════════════════════════════════════════════════════════════╝ -->
 
 <div align="center">
 
-<!-- ═══════════════════════ 3D CYBERNETIC HERO BANNER ═══════════════════════ -->
-<img src="assets/hero-portfolio.svg" alt="Vijayaramanujam — Computer Science Engineer & Aspiring AI Developer" width="850"/>
+<!-- ═══════════════════════ CODECRAFT LUXURY HERO BANNER ═══════════════════════ -->
+<img src="assets/codecraft-hero.svg" alt="Vijayaramanujam — Hi, I'm Vijay. I build intelligent AI for the future." width="850"/>
 
 <br/><br/>
 
-<!-- Profile Badges & Stats -->
-<a href="https://github.com/Vijayaramanujam">
-  <img src="https://komarev.com/ghpvc/?username=Vijayaramanujam&style=for-the-badge&color=00f5d4&label=PROFILE+VIEWS" alt="Profile Views"/>
-</a>
-&nbsp;
-<a href="https://github.com/Vijayaramanujam?tab=followers">
-  <img src="https://img.shields.io/github/followers/Vijayaramanujam?style=for-the-badge&color=7b61ff&labelColor=0d1117&label=Followers" alt="Followers"/>
-</a>
-&nbsp;
-<a href="https://github.com/Vijayaramanujam?tab=repositories">
-  <img src="https://img.shields.io/github/stars/Vijayaramanujam?style=for-the-badge&color=ff61d4&labelColor=0d1117&label=Stars" alt="Stars"/>
-</a>
-&nbsp;
-<a href="https://leetcode.com/u/Vijayaramanujam/">
-  <img src="https://img.shields.io/badge/LeetCode-564+-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
-</a>
+<!-- ═══════════════════════ ABOUT ME & STATS OVERVIEW ═══════════════════════ -->
+<img src="assets/codecraft-stats.svg" alt="About Me & Verified Stats" width="850"/>
 
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ WHO I AM & MISSION ═══════════════════════ -->
-
-<div align="center">
-
-```
- ~/vijayaramanujam $ cat executive-summary.json
-```
-
-</div>
-
-<br/>
-
-<table>
-<tr>
-<td width="58%" valign="top">
-
-### 💡 Executive Bio
-I build **agentic AI platforms**, **scalable cloud APIs**, and **intelligent automation engines** that tackle real-world complexity — from enterprise carbon accounting across all 3 GHG scopes to multi-agent clinical diagnostic systems. 
-
-- 🎓 **Education:** B.E. in Computer Science Engineering at **Chennai Institute of Technology** (**CGPA: 9.52 / 10**)
-- 🧠 **Primary Focus:** Multi-Agent Systems, RAG Pipelines, Vector Search & High-Performance Backends
-- ⚡ **Competitive Edge:** Solved **564+ LeetCode problems** (*Peak Rating: 1738*) & **200+ CodeChef challenges**
-- 🎙️ **Community:** Chief Communication Officer at *Asymmetric Club*, tech writer on Medium & Spotify podcast host
-
-</td>
-<td width="42%" valign="top">
-
-```json
-{
-  "engineer": "Vijayaramanujam N",
-  "role": "Aspiring AI Developer",
-  "location": "Chennai, India",
-  "academicStanding": "CGPA 9.52 / 10",
-  "achievements": [
-    "🥈 1st Runner-Up · One Earth Hackathon (5000+ teams)",
-    "🏆 Best UI/UX · HackOrbital IIST (75 teams)",
-    "🥈 Runner-Up · Pragyan AI Hackathon NIT Trichy"
-  ],
-  "philosophy": "Ship fast. Learn faster. Break nothing."
-}
-```
-
-</td>
-</tr>
-</table>
-
-<br/>
+<br/><br/>
 
 <!-- ═══════════════════════ TECHNOLOGIES I MASTER ═══════════════════════ -->
+<img src="assets/skills-master.svg" alt="Technologies I Master" width="850"/>
 
-<div align="center">
+<br/><br/>
 
-<img src="assets/skills-master.svg" alt="Technologies I Master — Full Stack & AI Skills" width="850"/>
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════ 3D ISOMETRIC STATS & TROPHIES ═══════════════════════ -->
-
-<div align="center">
-
+<!-- ═══════════════════════ 3D ISOMETRIC AWARDS & TROPHIES ═══════════════════════ -->
 <img src="assets/stats-3d.svg" alt="3D Isometric Stats & Hackathon Achievements" width="850"/>
 
 </div>
 
 <br/>
 
-<!-- ═══════════════════════ FEATURED PROJECTS ═══════════════════════ -->
+<!-- ═══════════════════════ FEATURED PROJECTS (CodeCraft 3-Card Portfolio) ═══════════════════════ -->
 
-<details open>
-<summary><h2>🚀 &nbsp; Flagship Engineering Projects</h2></summary>
+<div align="center">
+  <sub>FEATURED PROJECTS</sub>
+  <h2>Some of My Recent Work</h2>
+</div>
+
 <br/>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33.3%" valign="top">
+
+```
+01 // SUSTAINABILITY AI
+```
 
 ### 🌍 CarbonIQ
-**AI Carbon Accounting & Decarbonization Platform (2026)**
+**Automated Carbon Accounting Platform**
 
-<img src="https://img.shields.io/badge/Python-00f5d4?style=flat-square&logo=python&logoColor=0d1117" alt="Python"/> <img src="https://img.shields.io/badge/React.js-7b61ff?style=flat-square&logo=react&logoColor=0d1117" alt="React"/> <img src="https://img.shields.io/badge/FastAPI-ff61d4?style=flat-square&logo=fastapi&logoColor=0d1117" alt="FastAPI"/> <img src="https://img.shields.io/badge/Groq_Vision-00d4ff?style=flat-square" alt="Groq"/>
+> AI-powered platform automating SME carbon accounting across all 3 GHG scopes with Groq Vision OCR & 149 CEA emission factors.
 
-- Automates SME carbon accounting across all 3 GHG scopes
-- Groq Vision invoice OCR + 149 CEA 2024 emission factors
-- EEIO-based emissions estimation & decarbonization planner
+<br/>
+
+`Python` `FastAPI` `React.js` `Groq`
+
+<br/>
+
+[View Project →](https://github.com/Vijayaramanujam)
 
 </td>
-<td width="50%" valign="top">
+<td width="33.3%" valign="top">
+
+```
+02 // HEALTHCARE AI
+```
 
 ### 🏥 Agentic Medical Analyser
-**Multi-Agent AI Healthcare Platform (2025)**
+**Multi-Agent Clinical Intelligence**
 
-<img src="https://img.shields.io/badge/Transformers-00f5d4?style=flat-square&logo=huggingface&logoColor=0d1117" alt="Transformers"/> <img src="https://img.shields.io/badge/RAG-7b61ff?style=flat-square" alt="RAG"/> <img src="https://img.shields.io/badge/FastAPI-ff61d4?style=flat-square&logo=fastapi&logoColor=0d1117" alt="FastAPI"/> <img src="https://img.shields.io/badge/NLP-00d4ff?style=flat-square" alt="NLP"/>
+> Context-aware clinical report analysis & symptom risk assessment driven by LLMs, transformer NLP, and modular RAG workflows.
 
-- Context-aware symptom interpretation & clinical report analysis
-- LLMs + transformer-based NLP + modular RAG pipelines
-- Automated risk assessment & healthcare decision support
+<br/>
+
+`Transformers` `RAG` `FastAPI` `LLMs`
+
+<br/>
+
+[View Project →](https://github.com/Vijayaramanujam)
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="33.3%" valign="top">
+
+```
+03 // ENTERPRISE AGENTS
+```
 
 ### 📊 Business Analyst Agent
-**Enterprise AI Automation (2026)**
+**Enterprise Workflow Automation**
 
-<img src="https://img.shields.io/badge/Google_ADK-00f5d4?style=flat-square&logo=google&logoColor=0d1117" alt="ADK"/> <img src="https://img.shields.io/badge/Gemini_API-7b61ff?style=flat-square" alt="Gemini"/> <img src="https://img.shields.io/badge/Streamlit-ff61d4?style=flat-square&logo=streamlit&logoColor=0d1117" alt="Streamlit"/>
+> Auto-generates BRDs, user stories, and Gantt charts from plain English using Google Agent Development Kit & Gemini API.
 
-- Auto-generates BRDs, use cases, Gantt charts from natural language
-- Multi-agent AI platform streamlining corporate business planning
-- Integrated Google Agent Development Kit (ADK) + Gemini models
+<br/>
 
-</td>
-<td width="50%" valign="top">
+`Google ADK` `Gemini` `Streamlit`
 
-### 🔍 Computer Vision QC System
-**Industrial Defect Detection @ SmartScope Automation**
+<br/>
 
-<img src="https://img.shields.io/badge/OpenCV-00f5d4?style=flat-square&logo=opencv&logoColor=0d1117" alt="OpenCV"/> <img src="https://img.shields.io/badge/CNN-7b61ff?style=flat-square" alt="CNN"/> <img src="https://img.shields.io/badge/Deep_Learning-ff61d4?style=flat-square" alt="DL"/>
-
-- Automated vision pipeline for defect classification on production lines
-- Dataset collection, augmentation & CNN hyperparameter optimization
-- Quality assurance reporting with documented outcomes
+[View Project →](https://github.com/Vijayaramanujam)
 
 </td>
 </tr>
 </table>
 
-</details>
-
 <br/>
 
-<!-- ═══════════════════════ GITHUB ANALYTICS & ACTIVITY ═══════════════════════ -->
+<!-- ═══════════════════════ GITHUB VELOCITY & ANALYTICS ═══════════════════════ -->
 
 <div align="center">
 
-<h2>📈 Real-Time Engineering Velocity</h2>
-
-<br/>
-
-<!-- Stats + Streak side by side -->
+<!-- GitHub Stats + Streak Cards -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Vijayaramanujam&show_icons=true&hide_border=true&title_color=00f5d4&icon_color=7b61ff&text_color=c9d1d9&bg_color=0d1117&ring_color=ff61d4"/>
-  <img src="https://github-readme-stats.vercel.app/api?username=Vijayaramanujam&show_icons=true&hide_border=true" alt="GitHub Stats" height="180"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Vijayaramanujam&show_icons=true&hide_border=true&title_color=6366f1&icon_color=a855f7&text_color=94a3b8&bg_color=0a0d1e&ring_color=38bdf8"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Vijayaramanujam&show_icons=true&hide_border=true" alt="GitHub Stats" height="175"/>
 </picture>
 &nbsp;&nbsp;
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com?user=Vijayaramanujam&hide_border=true&ring=00f5d4&fire=ff61d4&currStreakLabel=00f5d4&sideLabels=c9d1d9&dates=8b949e&background=0d1117&currStreakNum=7b61ff&sideNums=00f5d4"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Vijayaramanujam&hide_border=true" alt="GitHub Streak" height="180"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com?user=Vijayaramanujam&hide_border=true&ring=6366f1&fire=a855f7&currStreakLabel=38bdf8&sideLabels=94a3b8&dates=64748b&background=0a0d1e&currStreakNum=6366f1&sideNums=38bdf8"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=Vijayaramanujam&hide_border=true" alt="GitHub Streak" height="175"/>
 </picture>
 
 <br/><br/>
 
-<!-- Top Languages -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Vijayaramanujam&layout=compact&hide_border=true&title_color=00f5d4&text_color=c9d1d9&bg_color=0d1117&langs_count=10"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vijayaramanujam&layout=compact&hide_border=true&langs_count=10" alt="Top Languages" height="180"/>
-</picture>
+<!-- Contribution Activity Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Vijayaramanujam&bg_color=0a0d1e&color=6366f1&line=38bdf8&point=a855f7&area_color=6366f1&area=true&hide_border=true&custom_title=Contribution%20Velocity" alt="Activity Graph" width="850"/>
 
 <br/><br/>
 
 <!-- GitHub Trophies -->
 <img src="https://github-profile-trophy.vercel.app/?username=Vijayaramanujam&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=8" alt="Trophies" width="850"/>
 
-<br/><br/>
-
-<!-- Contribution Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Vijayaramanujam&bg_color=0d1117&color=00f5d4&line=7b61ff&point=ff61d4&area_color=00f5d4&area=true&hide_border=true&custom_title=Contribution%20Activity" alt="Activity Graph" width="850"/>
-
 </div>
 
 <br/>
 
-<!-- ═══════════════════════ CONNECT & COLLABORATE ═══════════════════════ -->
+<!-- ═══════════════════════ LET'S WORK TOGETHER (Exact CodeCraft Footer) ═══════════════════════ -->
 
 <div align="center">
 
-```
- ~/connect $ echo "Let's build intelligent systems together"
-```
+<table width="850">
+<tr>
+<td width="40%" valign="top">
+
+<sub>LET'S WORK TOGETHER</sub>
+### Have a project or internship in mind?
+I'm always open to discussing new AI projects, research, and high-impact engineering opportunities!
 
 <br/>
 
 <a href="mailto:vrn05nujan@gmail.com">
-  <img src="https://img.shields.io/badge/Email-vrn05nujan%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=00f5d4" alt="Email"/>
+  <img src="https://img.shields.io/badge/Get_In_Touch_↗-6366f1?style=for-the-badge&logoColor=white" alt="Get In Touch"/>
 </a>
-&nbsp;
-<a href="https://linkedin.com/in/vijayaramanujam05">
-  <img src="https://img.shields.io/badge/LinkedIn-vijayaramanujam05-0d1117?style=for-the-badge&logo=linkedin&logoColor=7b61ff" alt="LinkedIn"/>
-</a>
-&nbsp;
+
+</td>
+<td width="35%" valign="top">
+
+```
+“ Vijay is a high-velocity engineer 
+  who delivers robust AI systems with 
+  remarkable attention to detail. ”
+```
+
+<sub>— Hackathon Judge &amp; Club Collaborators</sub>
+
+</td>
+<td width="25%" valign="top">
+
+<sub>FOLLOW ME</sub><br/>
+
 <a href="https://github.com/Vijayaramanujam">
-  <img src="https://img.shields.io/badge/GitHub-Vijayaramanujam-0d1117?style=for-the-badge&logo=github&logoColor=ff61d4" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/GitHub-0a0d1e?style=flat-square&logo=github&logoColor=6366f1" alt="GitHub"/>
+</a><br/>
+<a href="https://linkedin.com/in/vijayaramanujam05">
+  <img src="https://img.shields.io/badge/LinkedIn-0a0d1e?style=flat-square&logo=linkedin&logoColor=38bdf8" alt="LinkedIn"/>
+</a><br/>
+<a href="mailto:vrn05nujan@gmail.com">
+  <img src="https://img.shields.io/badge/Email-0a0d1e?style=flat-square&logo=gmail&logoColor=ec4899" alt="Email"/>
+</a><br/>
+<a href="https://leetcode.com/u/Vijayaramanujam/">
+  <img src="https://img.shields.io/badge/LeetCode-0a0d1e?style=flat-square&logo=leetcode&logoColor=f59e0b" alt="LeetCode"/>
 </a>
 
-</div>
+</td>
+</tr>
+</table>
 
 <br/>
 
-<!-- ═══════════════════════ CLOSING FOOTER BANNER ═══════════════════════ -->
-
-<div align="center">
-
-<img src="assets/footer-banner.svg" alt="Ship fast. Learn faster. Break nothing." width="850"/>
-
-<br/><br/>
-
-<sub>⚡ Built with 3D Cybernetic SVGs, High-Contrast UI &amp; Automated CI/CD Pipelines</sub>
-<br/>
-<sub>🔄 Synchronized with GitHub Actions • Vijayaramanujam · Chennai Institute of Technology</sub>
+<sub>© 2026 Vijayaramanujam · Made with 💜 for AI Engineering · Chennai Institute of Technology</sub>
 
 </div>
