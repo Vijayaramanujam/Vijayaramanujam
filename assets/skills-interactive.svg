@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050814"/>
+      <stop offset="50%" style="stop-color:#0b1126"/>
+      <stop offset="100%" style="stop-color:#040713"/>
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#161d36;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#0c1122;stop-opacity:0.95"/>
+    </linearGradient>
+
+    <!-- Shimmer Bar Gradients with moving light highlight -->
+    <linearGradient id="glowPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8957e5"/>
+      <stop offset="50%" style="stop-color:#d2a8ff"/>
+      <stop offset="100%" style="stop-color:#8957e5"/>
+    </linearGradient>
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb"/>
+      <stop offset="50%" style="stop-color:#79c0ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <linearGradient id="glowPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bf4b8a"/>
+      <stop offset="50%" style="stop-color:#ff7b72"/>
+      <stop offset="100%" style="stop-color:#bf4b8a"/>
+    </linearGradient>
+    <linearGradient id="glowGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#238636"/>
+      <stop offset="50%" style="stop-color:#7ee787"/>
+      <stop offset="100%" style="stop-color:#238636"/>
+    </linearGradient>
+
+    <!-- Laser beam / Sweeper Gradient -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Continuous Laser Pulse & Breathing meters */
+    @keyframes barPulse1 { 0%, 100% { width: 87px; } 50% { width: 93px; } }
+    @keyframes barPulse2 { 0%, 100% { width: 85px; } 50% { width: 90px; } }
+    @keyframes barPulse3 { 0%, 100% { width: 78px; } 50% { width: 83px; } }
+    @keyframes barPulse4 { 0%, 100% { width: 89px; } 50% { width: 94px; } }
+    @keyframes barPulse5 { 0%, 100% { width: 82px; } 50% { width: 86px; } }
+
+    /* Moving light scanner beam across cards */
+    @keyframes scanBeam { 0% { transform: translateX(-400px); } 100% { transform: translateX(850px); } }
+
+    /* Beacon radar pulses */
+    @keyframes beacon { 0%, 100% { r: 2.5; opacity: 0.4; } 50% { r: 4.5; opacity: 1; } }
+    @keyframes ringExpand { 0% { r: 3; opacity: 0.8; } 100% { r: 8; opacity: 0; } }
+
+    /* Shimmering gradient shift */
+    @keyframes shimmerMove { 0% { opacity: 0.75; } 50% { opacity: 1; } 100% { opacity: 0.75; } }
+
+    .pulse-dot { animation: beacon 2s ease-in-out infinite; }
+    .radar-ring { animation: ringExpand 2s ease-out infinite; }
+    .scanner { animation: scanBeam 4s linear infinite; }
+    .meter-shimmer { animation: shimmerMove 3s ease-in-out infinite; }
+
+    .anim-bar-1 { animation: barPulse1 3.5s ease-in-out infinite; }
+    .anim-bar-2 { animation: barPulse2 4.2s ease-in-out infinite; }
+    .anim-bar-3 { animation: barPulse3 3.8s ease-in-out infinite; }
+    .anim-bar-4 { animation: barPulse4 4.5s ease-in-out infinite; }
+
+    .font-title { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 2px; font-weight: bold; }
+    .font-skill { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 500; }
+    .font-pct { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 9.5px; font-weight: 700; }
+  </style>
+
+  <!-- Canvas -->
+  <rect width="850" height="420" rx="12" fill="url(#bg)" stroke="#1e293b" stroke-width="1.2"/>
+
+  <!-- Subtle Perspective Grid -->
+  <g opacity="0.04" stroke="#38bdf8" stroke-width="0.5">
+    <line x1="0" y1="50" x2="850" y2="50"/>
+    <line x1="0" y1="230" x2="850" y2="230"/>
+    <line x1="425" y1="0" x2="425" y2="420"/>
+  </g>
+
+  <!-- Ambient Light Sweeper Line -->
+  <rect class="scanner" y="46" width="300" height="364" fill="url(#beamGrad)" opacity="0.04"/>
+
+  <!-- Top Header Title with Pulse Beacons -->
+  <g transform="translate(425, 32)">
+    <circle cx="-135" cy="-3" r="3" fill="#38bdf8" class="pulse-dot"/>
+    <text x="0" y="0" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#38bdf8" letter-spacing="3" font-weight="bold" filter="url(#neonGlow)">
+      &lt; TECHNOLOGIES I MASTER /&gt;
+    </text>
+    <circle cx="135" cy="-3" r="3" fill="#38bdf8" class="pulse-dot"/>
+  </g>
+  <line x1="160" y1="42" x2="690" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- 4 INTERACTIVE DYNAMIC DOMAIN CARDS (2x2 Grid)                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- CARD 1: AI / ML & GEN AI (Top-Left) -->
+  <g transform="translate(20, 56)">
+    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#8957e5" stroke-width="1" stroke-opacity="0.6"/>
+    <rect width="395" height="26" rx="10" fill="#8957e5" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#8957e5" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#d2a8ff">AI / ML &amp; GEN AI</text>
+
+    <!-- Row 1: RAG & Multi-Agent -->
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="3" fill="#d2a8ff" class="pulse-dot"/>
+      <circle cx="0" cy="-4" r="3" fill="none" stroke="#d2a8ff" stroke-width="0.8" class="radar-ring"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">RAG &amp; Multi-Agent Systems</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="87" height="8" rx="4" fill="url(#glowPurple)" class="anim-bar-1 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">92%</text>
+    </g>
+    <!-- Row 2: Gemini API & LLMs -->
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="3" fill="#d2a8ff" class="pulse-dot" style="animation-delay: 0.3s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Gemini API &amp; LLM Orchestration</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="85" height="8" rx="4" fill="url(#glowPurple)" class="anim-bar-2 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">90%</text>
+    </g>
+    <!-- Row 3: Transformers & NLP -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="3" fill="#d2a8ff" class="pulse-dot" style="animation-delay: 0.6s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Transformers &amp; HuggingFace</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="78" height="8" rx="4" fill="url(#glowPurple)" class="anim-bar-3 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">82%</text>
+    </g>
+    <!-- Row 4: OpenCV & CNNs -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="3" fill="#d2a8ff" class="pulse-dot" style="animation-delay: 0.9s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">OpenCV &amp; CNN Image Models</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="74" height="8" rx="4" fill="url(#glowPurple)" class="anim-bar-1 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">78%</text>
+    </g>
+    <!-- Row 5: Qdrant & Embeddings -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="3" fill="#d2a8ff" class="pulse-dot" style="animation-delay: 1.2s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Qdrant Vector DB &amp; BGE</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="82" height="8" rx="4" fill="url(#glowPurple)" class="anim-bar-2 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">86%</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: LANGUAGES & DSA (Top-Right) -->
+  <g transform="translate(435, 56)">
+    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#1f6feb" stroke-width="1" stroke-opacity="0.6"/>
+    <rect width="395" height="26" rx="10" fill="#1f6feb" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#1f6feb" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#79c0ff">LANGUAGES &amp; DSA</text>
+
+    <!-- Python -->
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="3" fill="#79c0ff" class="pulse-dot"/>
+      <circle cx="0" cy="-4" r="3" fill="none" stroke="#79c0ff" stroke-width="0.8" class="radar-ring"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Python (Core, Async, APIs)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="89" height="8" rx="4" fill="url(#glowCyan)" class="anim-bar-4 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">94%</text>
+    </g>
+    <!-- Java -->
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="3" fill="#79c0ff" class="pulse-dot" style="animation-delay: 0.3s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Java (OOP, Collections)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="82" height="8" rx="4" fill="url(#glowCyan)" class="anim-bar-1 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">86%</text>
+    </g>
+    <!-- C++ -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="3" fill="#79c0ff" class="pulse-dot" style="animation-delay: 0.6s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">C++ / STL (Problem Solving)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="74" height="8" rx="4" fill="url(#glowCyan)" class="anim-bar-2 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">78%</text>
+    </g>
+    <!-- JavaScript -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="3" fill="#79c0ff" class="pulse-dot" style="animation-delay: 0.9s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">JavaScript (ES6+, DOM)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="81" height="8" rx="4" fill="url(#glowCyan)" class="anim-bar-3 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">85%</text>
+    </g>
+    <!-- SQL -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="3" fill="#79c0ff" class="pulse-dot" style="animation-delay: 1.2s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">SQL (Relational Queries)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="76" height="8" rx="4" fill="url(#glowCyan)" class="anim-bar-1 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">80%</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: FULL STACK & WEB (Bottom-Left) -->
+  <g transform="translate(20, 236)">
+    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#bf4b8a" stroke-width="1" stroke-opacity="0.6"/>
+    <rect width="395" height="26" rx="10" fill="#bf4b8a" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#bf4b8a" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#ff7b72">FULL STACK &amp; WEB</text>
+
+    <!-- React.js -->
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="3" fill="#ff7b72" class="pulse-dot"/>
+      <circle cx="0" cy="-4" r="3" fill="none" stroke="#ff7b72" stroke-width="0.8" class="radar-ring"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">React.js (SPA, Hooks)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="84" height="8" rx="4" fill="url(#glowPink)" class="anim-bar-1 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">88%</text>
+    </g>
+    <!-- FastAPI -->
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="3" fill="#ff7b72" class="pulse-dot" style="animation-delay: 0.3s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">FastAPI (Async Microservices)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="87" height="8" rx="4" fill="url(#glowPink)" class="anim-bar-2 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">92%</text>
+    </g>
+    <!-- Next.js -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="3" fill="#ff7b72" class="pulse-dot" style="animation-delay: 0.6s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Next.js (App Router, SSR)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="74" height="8" rx="4" fill="url(#glowPink)" class="anim-bar-3 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">78%</text>
+    </g>
+    <!-- Node / Express -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="3" fill="#ff7b72" class="pulse-dot" style="animation-delay: 0.9s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Node.js / Express Backend</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="79" height="8" rx="4" fill="url(#glowPink)" class="anim-bar-4 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">83%</text>
+    </g>
+    <!-- Streamlit -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="3" fill="#ff7b72" class="pulse-dot" style="animation-delay: 1.2s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Streamlit (AI UI Prototyping)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="82" height="8" rx="4" fill="url(#glowPink)" class="anim-bar-1 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">86%</text>
+    </g>
+  </g>
+
+  <!-- CARD 4: DATA SCIENCE & CLOUD (Bottom-Right) -->
+  <g transform="translate(435, 236)">
+    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#238636" stroke-width="1" stroke-opacity="0.6"/>
+    <rect width="395" height="26" rx="10" fill="#238636" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#238636" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#7ee787">DATA SCIENCE &amp; CLOUD</text>
+
+    <!-- Pandas / NumPy -->
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="3" fill="#7ee787" class="pulse-dot"/>
+      <circle cx="0" cy="-4" r="3" fill="none" stroke="#7ee787" stroke-width="0.8" class="radar-ring"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Pandas &amp; NumPy Analytics</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="85" height="8" rx="4" fill="url(#glowGreen)" class="anim-bar-1 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">90%</text>
+    </g>
+    <!-- MongoDB / Redis -->
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="3" fill="#7ee787" class="pulse-dot" style="animation-delay: 0.3s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">MongoDB &amp; Redis Caching</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="81" height="8" rx="4" fill="url(#glowGreen)" class="anim-bar-2 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">85%</text>
+    </g>
+    <!-- Docker / Git -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="3" fill="#7ee787" class="pulse-dot" style="animation-delay: 0.6s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">Docker &amp; GitHub Actions</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="84" height="8" rx="4" fill="url(#glowGreen)" class="anim-bar-3 meter-shimmer" filter="url(#neonGlow)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">88%</text>
+    </g>
+    <!-- EEIO-LCA & Groq -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="3" fill="#7ee787" class="pulse-dot" style="animation-delay: 0.9s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">EEIO-LCA &amp; Groq Vision</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="79" height="8" rx="4" fill="url(#glowGreen)" class="anim-bar-1 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">83%</text>
+    </g>
+    <!-- AWS Cloud -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="3" fill="#7ee787" class="pulse-dot" style="animation-delay: 1.2s;"/>
+      <text x="10" y="0" class="font-skill" fill="#f1f5f9">AWS (AI Practitioner)</text>
+      <rect x="245" y="-8" width="95" height="8" rx="4" fill="#0d1117"/>
+      <rect x="245" y="-8" width="73" height="8" rx="4" fill="url(#glowGreen)" class="anim-bar-4 meter-shimmer"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">77%</text>
+    </g>
+  </g>
+</svg>
