@@ -1,0 +1,405 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020515"/>
+      <stop offset="50%" style="stop-color:#080c1d"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#070b14"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f5d4"/>
+      <stop offset="100%" style="stop-color:#00d4ff"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7b61ff"/>
+      <stop offset="100%" style="stop-color:#b388ff"/>
+    </linearGradient>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff61d4"/>
+      <stop offset="100%" style="stop-color:#ff90e8"/>
+    </linearGradient>
+    
+    <!-- Skill bar gradients -->
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f5d4;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#00f5d4;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="barPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7b61ff;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7b61ff;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="barPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff61d4;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#ff61d4;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseDot { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+    @keyframes glowLine { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+    .dot-cyan { animation: pulseDot 2s ease-in-out infinite; }
+    .dot-purple { animation: pulseDot 2.3s ease-in-out infinite; }
+    .dot-pink { animation: pulseDot 1.8s ease-in-out infinite; }
+    .card-border { transition: all 0.3s ease; }
+    .header-title { font-family: 'Consolas', 'Courier New', monospace; font-size: 13px; letter-spacing: 3px; font-weight: bold; }
+    .tag-title { font-family: 'Consolas', 'Courier New', monospace; font-size: 10px; letter-spacing: 2px; font-weight: bold; }
+    .skill-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 500; }
+    .pct-val { font-family: 'Consolas', monospace; font-size: 8px; font-weight: bold; }
+  </style>
+
+  <!-- Deep Dark Background -->
+  <rect width="850" height="420" rx="10" fill="url(#bg)"/>
+  
+  <!-- Subtle decorative grid -->
+  <g opacity="0.04" stroke="#00f5d4" stroke-width="0.5">
+    <line x1="0" y1="50" x2="850" y2="50"/>
+    <line x1="0" y1="230" x2="850" y2="230"/>
+    <line x1="285" y1="0" x2="285" y2="420"/>
+    <line x1="565" y1="0" x2="565" y2="420"/>
+  </g>
+
+  <!-- Top Title Bar -->
+  <text x="425" y="32" text-anchor="middle" class="header-title" fill="#00f5d4" filter="url(#glow)">
+    &#x276E; TECH STACK ARCHITECTURE &#x276F;
+  </text>
+  <line x1="180" y1="42" x2="670" y2="42" stroke="url(#cyanGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- ROW 1 : 3 COLUMNS (y = 55, h = 170)                          -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- CARD 1: Programming Languages (Cyan) -->
+  <g transform="translate(20, 55)">
+    <rect width="255" height="170" rx="8" fill="url(#cardBg)" stroke="#00f5d4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <!-- Terminal header -->
+    <rect width="255" height="26" rx="8" fill="#00f5d4" opacity="0.08"/>
+    <rect y="12" width="255" height="14" fill="#00f5d4" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="135" y="17" text-anchor="middle" class="tag-title" fill="#00f5d4">LANGUAGES</text>
+    
+    <!-- Python -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Python</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="76" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">90%</text>
+    </g>
+    <!-- Java -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Java</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="72" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">85%</text>
+    </g>
+    <!-- C++ -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">C++</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="60" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">70%</text>
+    </g>
+    <!-- JavaScript -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">JavaScript</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">80%</text>
+    </g>
+    <!-- SQL / HTML / CSS -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">SQL / Web Core</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="64" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">75%</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: AI / ML / GenAI (Purple) -->
+  <g transform="translate(295, 55)">
+    <rect width="260" height="170" rx="8" fill="url(#cardBg)" stroke="#7b61ff" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect width="260" height="26" rx="8" fill="#7b61ff" opacity="0.08"/>
+    <rect y="12" width="260" height="14" fill="#7b61ff" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="137" y="17" text-anchor="middle" class="tag-title" fill="#7b61ff">AI / ML &amp; GEN AI</text>
+    
+    <!-- RAG Pipelines -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">RAG Pipelines</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="76" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">90%</text>
+    </g>
+    <!-- Multi-Agent ADK -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Multi-Agent ADK</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="72" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">85%</text>
+    </g>
+    <!-- LLM APIs & Gemini -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">LLMs / Gemini</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="76" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">90%</text>
+    </g>
+    <!-- Transformers & NLP -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Transformers NLP</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="68" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">80%</text>
+    </g>
+    <!-- Computer Vision -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">OpenCV &amp; CNNs</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="64" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">75%</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: Web & Frameworks (Pink) -->
+  <g transform="translate(575, 55)">
+    <rect width="255" height="170" rx="8" fill="url(#cardBg)" stroke="#ff61d4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect width="255" height="26" rx="8" fill="#ff61d4" opacity="0.08"/>
+    <rect y="12" width="255" height="14" fill="#ff61d4" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="135" y="17" text-anchor="middle" class="tag-title" fill="#ff61d4">WEB &amp; FRAMEWORKS</text>
+    
+    <!-- React.js -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">React.js</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="72" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="190" y="-1" class="pct-val" fill="#ff61d4">85%</text>
+    </g>
+    <!-- FastAPI -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">FastAPI</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="76" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="190" y="-1" class="pct-val" fill="#ff61d4">90%</text>
+    </g>
+    <!-- Next.js -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Next.js</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="64" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="190" y="-1" class="pct-val" fill="#ff61d4">75%</text>
+    </g>
+    <!-- Node / Express -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Node / Express</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="190" y="-1" class="pct-val" fill="#ff61d4">80%</text>
+    </g>
+    <!-- Streamlit -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Streamlit</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="190" y="-1" class="pct-val" fill="#ff61d4">80%</text>
+    </g>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- ROW 2 : 3 COLUMNS (y = 235, h = 165)                         -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- CARD 4: Data Science & Analytics (Cyan/Blue) -->
+  <g transform="translate(20, 235)">
+    <rect width="255" height="165" rx="8" fill="url(#cardBg)" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect width="255" height="26" rx="8" fill="#00d4ff" opacity="0.08"/>
+    <rect y="12" width="255" height="14" fill="#00d4ff" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="135" y="17" text-anchor="middle" class="tag-title" fill="#00d4ff">DATA SCIENCE</text>
+    
+    <!-- Pandas -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00d4ff" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Pandas</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="76" height="8" rx="4" fill="url(#barBlue)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00d4ff">90%</text>
+    </g>
+    <!-- NumPy -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00d4ff" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">NumPy</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="72" height="8" rx="4" fill="url(#barBlue)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00d4ff">85%</text>
+    </g>
+    <!-- Matplotlib -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00d4ff" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Matplotlib</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barBlue)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00d4ff">80%</text>
+    </g>
+    <!-- Seaborn -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00d4ff" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Seaborn</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="64" height="8" rx="4" fill="url(#barBlue)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00d4ff">75%</text>
+    </g>
+    <!-- EEIO-LCA & Emission calc -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00d4ff" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">EEIO-LCA Models</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barBlue)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00d4ff">80%</text>
+    </g>
+  </g>
+
+  <!-- CARD 5: Databases & Cloud (Purple) -->
+  <g transform="translate(295, 235)">
+    <rect width="260" height="165" rx="8" fill="url(#cardBg)" stroke="#7b61ff" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect width="260" height="26" rx="8" fill="#7b61ff" opacity="0.08"/>
+    <rect y="12" width="260" height="14" fill="#7b61ff" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="137" y="17" text-anchor="middle" class="tag-title" fill="#7b61ff">DATABASES &amp; CLOUD</text>
+    
+    <!-- MongoDB -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">MongoDB</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="72" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">85%</text>
+    </g>
+    <!-- Redis -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Redis</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="68" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">80%</text>
+    </g>
+    <!-- Qdrant Vector DB -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Qdrant Vector DB</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="72" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">85%</text>
+    </g>
+    <!-- Firebase -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Firebase</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="64" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">75%</text>
+    </g>
+    <!-- AWS Cloud -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7b61ff" class="dot-purple"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">AWS (Practitioner)</text>
+      <rect x="100" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="100" y="-8" width="60" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="195" y="-1" class="pct-val" fill="#7b61ff">70%</text>
+    </g>
+  </g>
+
+  <!-- CARD 6: Tools & Platforms (Cyan) -->
+  <g transform="translate(575, 235)">
+    <rect width="255" height="165" rx="8" fill="url(#cardBg)" stroke="#00f5d4" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect width="255" height="26" rx="8" fill="#00f5d4" opacity="0.08"/>
+    <rect y="12" width="255" height="14" fill="#00f5d4" opacity="0.08"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f57" opacity="0.8"/>
+    <circle cx="24" cy="13" r="3" fill="#febc2e" opacity="0.8"/>
+    <circle cx="34" cy="13" r="3" fill="#28c840" opacity="0.8"/>
+    <text x="135" y="17" text-anchor="middle" class="tag-title" fill="#00f5d4">TOOLS &amp; PLATFORMS</text>
+    
+    <!-- Git & GitHub -->
+    <g transform="translate(16, 46)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Git &amp; GitHub</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="76" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">90%</text>
+    </g>
+    <!-- Docker -->
+    <g transform="translate(16, 72)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Docker</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="60" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">70%</text>
+    </g>
+    <!-- VS Code -->
+    <g transform="translate(16, 98)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">VS Code</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="76" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">90%</text>
+    </g>
+    <!-- Postman & APIs -->
+    <g transform="translate(16, 124)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Postman &amp; REST</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="72" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">85%</text>
+    </g>
+    <!-- Linux & Bash -->
+    <g transform="translate(16, 150)">
+      <circle cx="0" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
+      <text x="10" y="0" class="skill-name" fill="#e2e8f0">Linux &amp; Bash</text>
+      <rect x="95" y="-8" width="85" height="8" rx="4" fill="#1e293b"/>
+      <rect x="95" y="-8" width="68" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="190" y="-1" class="pct-val" fill="#00f5d4">80%</text>
+    </g>
+  </g>
+
+  <!-- Outer ambient border -->
+  <rect x="1" y="1" width="848" height="418" rx="10" fill="none" stroke="#00f5d4" stroke-width="0.4" opacity="0.2"/>
+</svg>

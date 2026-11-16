@@ -73,7 +73,7 @@ const vijayaramanujam = {
 
 <div align="center">
 
-<img src="assets/toolbox-stream.svg" alt="Tech Stack with Radar Chart" width="850"/>
+<img src="assets/tech-stack.svg?v=2" alt="Tech Stack with Radar Chart" width="850"/>
 
 </div>
 
