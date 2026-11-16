@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="260" viewBox="0 0 850 260">
+  <defs>
+    <!-- Background Space Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030614"/>
+      <stop offset="40%" style="stop-color:#080d26"/>
+      <stop offset="80%" style="stop-color:#0c112e"/>
+      <stop offset="100%" style="stop-color:#040716"/>
+    </linearGradient>
+
+    <!-- Isometric Floor Grid Gradient -->
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:0.02"/>
+    </linearGradient>
+
+    <!-- 3D Cube Gradients -->
+    <!-- Cube 1 (Cyan/Blue) -->
+    <linearGradient id="c1Top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+    <linearGradient id="c1Left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0284c7"/><stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+    <linearGradient id="c1Right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#075985"/><stop offset="100%" style="stop-color:#0c4a6e"/>
+    </linearGradient>
+
+    <!-- Cube 2 (Purple/Violet) -->
+    <linearGradient id="c2Top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c084fc"/><stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+    <linearGradient id="c2Left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea"/><stop offset="100%" style="stop-color:#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="c2Right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b21a8"/><stop offset="100%" style="stop-color:#581c87"/>
+    </linearGradient>
+
+    <!-- Cube 3 (Pink/Fuchsia) -->
+    <linearGradient id="c3Top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f472b6"/><stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+    <linearGradient id="c3Left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#db2777"/><stop offset="100%" style="stop-color:#be185d"/>
+    </linearGradient>
+    <linearGradient id="c3Right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9d174d"/><stop offset="100%" style="stop-color:#831843"/>
+    </linearGradient>
+
+    <!-- Glowing Sphere & Orbs -->
+    <radialGradient id="neonOrb" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:0.9"/>
+      <stop offset="85%" style="stop-color:#6366f1;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Torus / Ring Gradients -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="50%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="title3D" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="40%" style="stop-color:#818cf8"/>
+      <stop offset="80%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="glow3D" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="drop3D" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes float1 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+    @keyframes float2 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-3deg); } }
+    @keyframes float3 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    @keyframes spinRing { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes pulseGlow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .cube-float-1 { animation: float1 5s ease-in-out infinite; }
+    .cube-float-2 { animation: float2 6s ease-in-out infinite; }
+    .cube-float-3 { animation: float3 4.5s ease-in-out infinite; }
+    .ring-spin { animation: spinRing 20s linear infinite; transform-origin: 730px 130px; }
+    .glow-pulse { animation: pulseGlow 2.5s ease-in-out infinite; }
+    .cursor { animation: blink 1s step-end infinite; }
+
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  </style>
+
+  <!-- Deep Cosmic Canvas -->
+  <rect width="850" height="260" rx="14" fill="url(#bg)" stroke="#1e293b" stroke-width="1.2"/>
+
+  <!-- ═════════ 3D PERSPECTIVE WIREFRAME FLOOR (GRID) ═════════ -->
+  <g opacity="0.18">
+    <!-- Horizon Line -->
+    <line x1="0" y1="180" x2="850" y2="180" stroke="#38bdf8" stroke-width="0.8"/>
+    <!-- Vanishing perspective lines radiating from (425, -50) -->
+    <line x1="425" y1="180" x2="0" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="140" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="280" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="425" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="570" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="710" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <line x1="425" y1="180" x2="850" y2="260" stroke="#38bdf8" stroke-width="0.7"/>
+    <!-- Horizontal distance lines -->
+    <line x1="0" y1="195" x2="850" y2="195" stroke="#38bdf8" stroke-width="0.5"/>
+    <line x1="0" y1="215" x2="850" y2="215" stroke="#38bdf8" stroke-width="0.6"/>
+    <line x1="0" y1="240" x2="850" y2="240" stroke="#38bdf8" stroke-width="0.8"/>
+  </g>
+
+  <!-- Ambient background glow blobs -->
+  <circle cx="730" cy="130" r="130" fill="#6366f1" opacity="0.12" filter="url(#glow3D)"/>
+  <circle cx="150" cy="80" r="100" fill="#38bdf8" opacity="0.08"/>
+
+  <!-- ═════════ RIGHT SIDE: 3D THREE.JS / GSAP FLOATING COMPOSITION ═════════ -->
+
+  <!-- 1. Central 3D Glowing Torus Ring (Behind sphere) -->
+  <g class="ring-spin">
+    <ellipse cx="730" cy="130" rx="90" ry="42" fill="none" stroke="url(#ringGrad)" stroke-width="3" stroke-dasharray="14 18" opacity="0.7" filter="url(#glow3D)"/>
+    <circle cx="820" cy="130" r="4.5" fill="#38bdf8" filter="url(#glow3D)"/>
+    <circle cx="640" cy="130" r="3.5" fill="#f472b6" filter="url(#glow3D)"/>
+  </g>
+
+  <!-- 2. Realistic Shaded 3D Sphere (Centerpiece) -->
+  <g transform="translate(730, 130)" filter="url(#drop3D)">
+    <circle cx="0" cy="0" r="48" fill="url(#neonOrb)"/>
+    <!-- Wireframe longitude lines on sphere -->
+    <ellipse cx="0" cy="0" rx="48" ry="18" fill="none" stroke="#ffffff" stroke-width="0.7" opacity="0.35"/>
+    <ellipse cx="0" cy="0" rx="22" ry="48" fill="none" stroke="#ffffff" stroke-width="0.7" opacity="0.35"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8" filter="url(#glow3D)"/>
+  </g>
+
+  <!-- 3. Isometric 3D Floating Cube #1 (Cyan - Top Left) -->
+  <g transform="translate(610, 50)" class="cube-float-1" filter="url(#drop3D)">
+    <!-- Top Face -->
+    <polygon points="28,0 56,14 28,28 0,14" fill="url(#c1Top)"/>
+    <!-- Left Face -->
+    <polygon points="0,14 28,28 28,60 0,46" fill="url(#c1Left)"/>
+    <!-- Right Face -->
+    <polygon points="28,28 56,14 56,46 28,60" fill="url(#c1Right)"/>
+    <!-- Wireframe Edge Highlights -->
+    <polygon points="28,0 56,14 28,28 0,14" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.8"/>
+    <!-- Internal Tech Symbol -->
+    <text x="28" y="44" font-family="'Consolas',monospace" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">AI</text>
+  </g>
+
+  <!-- 4. Isometric 3D Floating Cube #2 (Purple - Bottom Right) -->
+  <g transform="translate(765, 155)" class="cube-float-2" filter="url(#drop3D)">
+    <polygon points="24,0 48,12 24,24 0,12" fill="url(#c2Top)"/>
+    <polygon points="0,12 24,24 24,52 0,40" fill="url(#c2Left)"/>
+    <polygon points="24,24 48,12 48,40 24,52" fill="url(#c2Right)"/>
+    <polygon points="24,0 48,12 24,24 0,12" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.8"/>
+    <text x="24" y="38" font-family="'Consolas',monospace" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">RAG</text>
+  </g>
+
+  <!-- 5. Isometric 3D Floating Cube #3 (Pink - Far Right Top) -->
+  <g transform="translate(790, 42)" class="cube-float-3" filter="url(#drop3D)">
+    <polygon points="18,0 36,9 18,18 0,9" fill="url(#c3Top)"/>
+    <polygon points="0,9 18,18 18,38 0,29" fill="url(#c3Left)"/>
+    <polygon points="18,18 36,9 36,29 18,38" fill="url(#c3Right)"/>
+    <polygon points="18,0 36,9 18,18 0,9" fill="none" stroke="#f472b6" stroke-width="0.6" opacity="0.8"/>
+  </g>
+
+  <!-- Floating 3D Octahedron / Diamond (Left of sphere) -->
+  <g transform="translate(635, 160)" class="cube-float-3">
+    <polygon points="14,0 28,14 14,28 0,14" fill="#38bdf8" opacity="0.3"/>
+    <polygon points="14,0 28,14 14,14" fill="#38bdf8" opacity="0.8"/>
+    <polygon points="0,14 14,14 14,28" fill="#0284c7" opacity="0.9"/>
+    <polygon points="14,14 28,14 14,28" fill="#0369a1" opacity="0.7"/>
+    <polygon points="14,0 28,14 14,28 0,14" fill="none" stroke="#38bdf8" stroke-width="0.8"/>
+  </g>
+
+  <!-- Floating Sparkles / Particles -->
+  <circle cx="585" cy="115" r="2" fill="#38bdf8" class="glow-pulse"/>
+  <circle cx="700" cy="45" r="1.5" fill="#ffffff" class="glow-pulse"/>
+  <circle cx="830" cy="120" r="2.5" fill="#f472b6" class="glow-pulse"/>
+  <circle cx="690" cy="210" r="2" fill="#c084fc" class="glow-pulse"/>
+
+  <!-- ═════════ LEFT SIDE: HERO TYPOGRAPHY & DEVELOPER BADGES ═════════ -->
+  <g transform="translate(45, 0)">
+    <!-- Terminal Command Pill -->
+    <g transform="translate(0, 34)">
+      <rect width="240" height="24" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.4"/>
+      <circle cx="12" cy="12" r="3.5" fill="#22c55e" class="glow-pulse"/>
+      <text x="24" y="16" class="font-mono" font-size="11" fill="#94a3b8">
+        vijayaramanujam.dev ~ <tspan fill="#38bdf8" font-weight="bold">status</tspan>
+      </text>
+    </g>
+
+    <!-- 3D Header Name with Multi-stop Gradient -->
+    <g transform="translate(0, 96)">
+      <text x="0" y="0" class="font-sans" font-size="42" font-weight="900" fill="url(#title3D)" letter-spacing="0.5" filter="url(#glow3D)">
+        VIJAYARAMANUJAM N
+      </text>
+      <!-- Typing Cursor -->
+      <rect x="490" y="-34" width="3.5" height="38" fill="#38bdf8" class="cursor" filter="url(#glow3D)"/>
+    </g>
+
+    <!-- Subtitle Role -->
+    <g transform="translate(0, 132)">
+      <text x="0" y="0" class="font-mono" font-size="15" fill="#ffffff" font-weight="700">
+        Aspiring AI Developer <tspan fill="#818cf8">//</tspan> <tspan fill="#38bdf8">Computer Science &amp; Engineering</tspan>
+      </text>
+    </g>
+
+    <!-- Key Metrics Ribbon -->
+    <g transform="translate(0, 164)">
+      <text x="0" y="0" class="font-mono" font-size="12" fill="#94a3b8">
+        🏛️ Chennai Institute of Technology <tspan fill="#334155">|</tspan> CGPA: <tspan fill="#34d399" font-weight="bold">9.52/10</tspan> <tspan fill="#334155">|</tspan> LeetCode: <tspan fill="#fbbf24" font-weight="bold">564+ Solved</tspan>
+      </text>
+    </g>
+
+    <!-- Futuristic Tech Chips (Horizontal Row) -->
+    <g transform="translate(0, 192)">
+      <!-- Chip 1: Agentic AI -->
+      <g>
+        <rect width="118" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5"/>
+        <circle cx="10" cy="13" r="3" fill="#38bdf8"/>
+        <text x="20" y="17" class="font-mono" font-size="10" fill="#38bdf8" font-weight="600">Multi-Agent AI</text>
+      </g>
+      <!-- Chip 2: RAG Pipelines -->
+      <g transform="translate(126, 0)">
+        <rect width="118" height="26" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.5"/>
+        <circle cx="10" cy="13" r="3" fill="#818cf8"/>
+        <text x="20" y="17" class="font-mono" font-size="10" fill="#818cf8" font-weight="600">RAG Pipelines</text>
+      </g>
+      <!-- Chip 3: Hackathon Winner -->
+      <g transform="translate(252, 0)">
+        <rect width="138" height="26" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="0.8" stroke-opacity="0.5"/>
+        <circle cx="10" cy="13" r="3" fill="#f472b6"/>
+        <text x="20" y="17" class="font-mono" font-size="10" fill="#f472b6" font-weight="600">Global Runner-Up</text>
+      </g>
+      <!-- Chip 4: Peak Rating -->
+      <g transform="translate(398, 0)">
+        <rect width="110" height="26" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.5"/>
+        <circle cx="10" cy="13" r="3" fill="#34d399"/>
+        <text x="20" y="17" class="font-mono" font-size="10" fill="#34d399" font-weight="600">1738 Rating</text>
+      </g>
+    </g>
+
+    <!-- Bottom Status Line -->
+    <g transform="translate(0, 236)">
+      <line x1="0" y1="0" x2="510" y2="0" stroke="#1e293b" stroke-width="1"/>
+      <text x="0" y="13" class="font-mono" font-size="9" fill="#64748b" letter-spacing="1.5">
+        ⚡ SHIP FAST. LEARN FASTER. BREAK NOTHING. · CIT CHENNAI
+      </text>
+    </g>
+  </g>
+
+  <!-- External Frame Accent -->
+  <rect x="2" y="2" width="846" height="256" rx="12" fill="none" stroke="#38bdf8" stroke-width="0.6" opacity="0.3"/>
+</svg>

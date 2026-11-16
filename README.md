@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header-clean.svg" width="100%" alt="Vijayaramanujam N — Header"/>
+<img src="assets/hero-3d.svg" width="100%" alt="Vijayaramanujam N — Header"/>
 
 <br/><br/>
 
