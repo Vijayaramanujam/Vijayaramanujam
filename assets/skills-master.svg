@@ -1,308 +1,262 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="850" height="420" viewBox="0 0 850 420">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Canvas -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#030712"/>
-      <stop offset="50%" style="stop-color:#070d24"/>
-      <stop offset="100%" style="stop-color:#0a0f1d"/>
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
     </linearGradient>
 
     <!-- Card Backgrounds -->
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.95"/>
-      <stop offset="100%" style="stop-color:#070b14;stop-opacity:0.9"/>
+      <stop offset="0%" style="stop-color:#1c2128"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
     </linearGradient>
 
-    <!-- Domain Glow & Title Gradients -->
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00f5d4"/>
-      <stop offset="100%" style="stop-color:#38bdf8"/>
+    <!-- Bar Gradients -->
+    <linearGradient id="barPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8957e5"/>
+      <stop offset="100%" style="stop-color:#bc8cff"/>
     </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7b61ff"/>
-      <stop offset="100%" style="stop-color:#c084fc"/>
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb"/>
+      <stop offset="100%" style="stop-color:#58a6ff"/>
     </linearGradient>
-    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff61d4"/>
-      <stop offset="100%" style="stop-color:#fb7185"/>
+    <linearGradient id="barPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bf4b8a"/>
+      <stop offset="100%" style="stop-color:#f778ba"/>
     </linearGradient>
-    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#fbbf24"/>
-      <stop offset="100%" style="stop-color:#f97316"/>
+    <linearGradient id="barGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#238636"/>
+      <stop offset="100%" style="stop-color:#3fb950"/>
     </linearGradient>
-
-    <!-- Progress Bar Gradient (Glowing Neon Cyan) -->
-    <linearGradient id="progCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00f5d4;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:#00f5d4;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="progPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7b61ff;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="progPink" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ff61d4;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:#fb7185;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="progAmber" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1"/>
-    </linearGradient>
-
-    <!-- Filters -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
-    @keyframes barShine {{ 0%, 100% {{ opacity: 0.85; }} 50% {{ opacity: 1; }} }}
-    @keyframes dotPulse {{ 0%, 100% {{ opacity: 0.4; }} 50% {{ opacity: 1; }} }}
-    
-    .bar-anim {{ animation: barShine 2.5s ease-in-out infinite; }}
-    .dot-cyan {{ animation: dotPulse 2s ease-in-out infinite; }}
-    .dot-purple {{ animation: dotPulse 2.3s ease-in-out infinite; }}
-    .dot-pink {{ animation: dotPulse 1.8s ease-in-out infinite; }}
-    .dot-amber {{ animation: dotPulse 2.1s ease-in-out infinite; }}
-
-    .main-title {{ font-family: 'Consolas', 'Courier New', monospace; font-size: 13px; letter-spacing: 4px; font-weight: 800; }}
-    .cat-title {{ font-family: 'Consolas', 'Courier New', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 700; }}
-    .skill-name {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 600; }}
-    .pct-label {{ font-family: 'Consolas', monospace; font-size: 9px; font-weight: bold; }}
+    .font-title { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 2px; font-weight: bold; }
+    .font-skill { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 500; }
+    .font-pct { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 9.5px; font-weight: 600; }
   </style>
 
-  <!-- Deep Cosmic Canvas -->
-  <rect width="850" height="420" rx="14" fill="url(#bg)"/>
+  <!-- Canvas -->
+  <rect width="850" height="420" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
 
-  <!-- Subtle Cyber Grid -->
-  <g opacity="0.035" stroke="#00f5d4" stroke-width="0.5">
-    <line x1="0" y1="50" x2="850" y2="50"/>
-    <line x1="0" y1="230" x2="850" y2="230"/>
-    <line x1="425" y1="0" x2="425" y2="420"/>
-  </g>
-
-  <!-- Header Title -->
-  <text x="425" y="32" text-anchor="middle" class="main-title" fill="#00f5d4" filter="url(#glow)">
-    &#x27E8; TECHNOLOGIES I MASTER &#x27E9;
+  <!-- Top Header Title -->
+  <text x="425" y="32" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="12" fill="#58a6ff" letter-spacing="3" font-weight="bold">
+    &lt; TECHNOLOGIES I MASTER /&gt;
   </text>
-  <line x1="180" y1="42" x2="670" y2="42" stroke="url(#cyanGrad)" stroke-width="0.8" opacity="0.4"/>
+  <line x1="160" y1="42" x2="690" y2="42" stroke="#30363d" stroke-width="1"/>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- 4 WIDE DOMAIN PANELS (2x2 GRID)                                 -->
+  <!-- 4 COMPACT DOMAIN CARDS (2x2 Grid)                               -->
+  <!-- Left column: x=20, w=395 | Right column: x=435, w=395          -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
 
-  <!-- 1. AI, MACHINE LEARNING & GEN AI (Top Left) -->
+  <!-- CARD 1: AI / ML & GEN AI (Top-Left) -->
   <g transform="translate(20, 56)">
-    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#7b61ff" stroke-width="0.9" stroke-opacity="0.4"/>
-    <rect width="395" height="28" rx="10" fill="#7b61ff" opacity="0.1"/>
-    <rect y="14" width="395" height="14" fill="#7b61ff" opacity="0.1"/>
-    <circle cx="15" cy="14" r="3.5" fill="#ff5f57" opacity="0.9"/>
-    <circle cx="26" cy="14" r="3.5" fill="#febc2e" opacity="0.9"/>
-    <circle cx="37" cy="14" r="3.5" fill="#28c840" opacity="0.9"/>
-    <text x="210" y="18" text-anchor="middle" class="cat-title" fill="#c084fc">AI / ML &amp; GEN AI</text>
+    <rect width="395" height="170" rx="8" fill="url(#cardBg)" stroke="#8957e5" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect width="395" height="26" rx="8" fill="#8957e5" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#8957e5" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#d2a8ff">AI / ML &amp; GEN AI</text>
 
-    <!-- Skill 1: RAG & Multi-Agent ADK -->
-    <g transform="translate(16, 48)">
-      <circle cx="2" cy="-4" r="2.5" fill="#c084fc" class="dot-purple"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">RAG &amp; Multi-Agent Systems</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="120" height="9" rx="4.5" fill="url(#progPurple)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#c084fc">92%</text>
+    <!-- Row 1: RAG & Multi-Agent -->
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="2.5" fill="#d2a8ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">RAG &amp; Multi-Agent Systems</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="87" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">92%</text>
     </g>
-    <!-- Skill 2: Gemini APIs & LLMs -->
-    <g transform="translate(16, 74)">
-      <circle cx="2" cy="-4" r="2.5" fill="#c084fc" class="dot-purple"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Gemini API &amp; LLM Orchestration</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="117" height="9" rx="4.5" fill="url(#progPurple)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#c084fc">90%</text>
+    <!-- Row 2: Gemini API & LLMs -->
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="2.5" fill="#d2a8ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Gemini API &amp; LLM Orchestration</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="85" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">90%</text>
     </g>
-    <!-- Skill 3: Transformers & NLP -->
-    <g transform="translate(16, 100)">
-      <circle cx="2" cy="-4" r="2.5" fill="#c084fc" class="dot-purple"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Transformers &amp; HuggingFace NLP</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="105" height="9" rx="4.5" fill="url(#progPurple)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#c084fc">82%</text>
+    <!-- Row 3: Transformers & NLP -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="2.5" fill="#d2a8ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Transformers &amp; HuggingFace</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="78" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">82%</text>
     </g>
-    <!-- Skill 4: Computer Vision (OpenCV/CNN) -->
-    <g transform="translate(16, 126)">
-      <circle cx="2" cy="-4" r="2.5" fill="#c084fc" class="dot-purple"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">OpenCV &amp; CNN Model Training</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="100" height="9" rx="4.5" fill="url(#progPurple)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#c084fc">78%</text>
+    <!-- Row 4: OpenCV & CNNs -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="2.5" fill="#d2a8ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">OpenCV &amp; CNN Image Models</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="74" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">78%</text>
     </g>
-    <!-- Skill 5: Vector DBs & Embeddings -->
-    <g transform="translate(16, 152)">
-      <circle cx="2" cy="-4" r="2.5" fill="#c084fc" class="dot-purple"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Qdrant Vector DB &amp; BGE Embeddings</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="112" height="9" rx="4.5" fill="url(#progPurple)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#c084fc">86%</text>
+    <!-- Row 5: Qdrant & Embeddings -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="2.5" fill="#d2a8ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Qdrant Vector DB &amp; BGE</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="82" height="8" rx="4" fill="url(#barPurple)"/>
+      <text x="355" y="-1" class="font-pct" fill="#d2a8ff">86%</text>
     </g>
   </g>
 
-  <!-- 2. CORE PROGRAMMING & DSA (Top Right) -->
+  <!-- CARD 2: LANGUAGES & DSA (Top-Right) -->
   <g transform="translate(435, 56)">
-    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#00f5d4" stroke-width="0.9" stroke-opacity="0.4"/>
-    <rect width="395" height="28" rx="10" fill="#00f5d4" opacity="0.08"/>
-    <rect y="14" width="395" height="14" fill="#00f5d4" opacity="0.08"/>
-    <circle cx="15" cy="14" r="3.5" fill="#ff5f57" opacity="0.9"/>
-    <circle cx="26" cy="14" r="3.5" fill="#febc2e" opacity="0.9"/>
-    <circle cx="37" cy="14" r="3.5" fill="#28c840" opacity="0.9"/>
-    <text x="210" y="18" text-anchor="middle" class="cat-title" fill="#00f5d4">LANGUAGES &amp; DSA</text>
+    <rect width="395" height="170" rx="8" fill="url(#cardBg)" stroke="#1f6feb" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect width="395" height="26" rx="8" fill="#1f6feb" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#1f6feb" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#79c0ff">LANGUAGES &amp; DSA</text>
 
     <!-- Python -->
-    <g transform="translate(16, 48)">
-      <circle cx="2" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Python (Advanced / Async)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="122" height="9" rx="4.5" fill="url(#progCyan)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#00f5d4">94%</text>
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="2.5" fill="#79c0ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Python (Core, Async, APIs)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="89" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">94%</text>
     </g>
     <!-- Java -->
-    <g transform="translate(16, 74)">
-      <circle cx="2" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Java (OOP / Enterprise)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="112" height="9" rx="4.5" fill="url(#progCyan)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#00f5d4">86%</text>
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="2.5" fill="#79c0ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Java (OOP, Collections)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="82" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">86%</text>
     </g>
     <!-- C++ -->
-    <g transform="translate(16, 100)">
-      <circle cx="2" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">C++ / STL (Problem Solving)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="102" height="9" rx="4.5" fill="url(#progCyan)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#00f5d4">78%</text>
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="2.5" fill="#79c0ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">C++ / STL (Problem Solving)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="74" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">78%</text>
     </g>
     <!-- JavaScript -->
-    <g transform="translate(16, 126)">
-      <circle cx="2" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">JavaScript (ES6+ / Node)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="110" height="9" rx="4.5" fill="url(#progCyan)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#00f5d4">85%</text>
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="2.5" fill="#79c0ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">JavaScript (ES6+, DOM)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="81" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">85%</text>
     </g>
-    <!-- SQL / Relational -->
-    <g transform="translate(16, 152)">
-      <circle cx="2" cy="-4" r="2.5" fill="#00f5d4" class="dot-cyan"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">SQL (PostgreSQL / MySQL)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="105" height="9" rx="4.5" fill="url(#progCyan)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#00f5d4">80%</text>
+    <!-- SQL -->
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="2.5" fill="#79c0ff"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">SQL (Relational Queries)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="76" height="8" rx="4" fill="url(#barCyan)"/>
+      <text x="355" y="-1" class="font-pct" fill="#79c0ff">80%</text>
     </g>
   </g>
 
-  <!-- 3. FULL STACK & MODERN WEB (Bottom Left) -->
+  <!-- CARD 3: FULL STACK & WEB (Bottom-Left) -->
   <g transform="translate(20, 236)">
-    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#ff61d4" stroke-width="0.9" stroke-opacity="0.4"/>
-    <rect width="395" height="28" rx="10" fill="#ff61d4" opacity="0.1"/>
-    <rect y="14" width="395" height="14" fill="#ff61d4" opacity="0.1"/>
-    <circle cx="15" cy="14" r="3.5" fill="#ff5f57" opacity="0.9"/>
-    <circle cx="26" cy="14" r="3.5" fill="#febc2e" opacity="0.9"/>
-    <circle cx="37" cy="14" r="3.5" fill="#28c840" opacity="0.9"/>
-    <text x="210" y="18" text-anchor="middle" class="cat-title" fill="#ff61d4">FULL STACK &amp; WEB</text>
+    <rect width="395" height="170" rx="8" fill="url(#cardBg)" stroke="#bf4b8a" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect width="395" height="26" rx="8" fill="#bf4b8a" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#bf4b8a" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#ff7b72">FULL STACK &amp; WEB</text>
 
     <!-- React.js -->
-    <g transform="translate(16, 48)">
-      <circle cx="2" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">React.js (Hooks / State)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="115" height="9" rx="4.5" fill="url(#progPink)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#ff61d4">88%</text>
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff7b72"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">React.js (SPA, Hooks)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="84" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">88%</text>
     </g>
     <!-- FastAPI -->
-    <g transform="translate(16, 74)">
-      <circle cx="2" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">FastAPI (High-Performance REST)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="120" height="9" rx="4.5" fill="url(#progPink)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#ff61d4">92%</text>
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff7b72"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">FastAPI (Async Microservices)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="87" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">92%</text>
     </g>
     <!-- Next.js -->
-    <g transform="translate(16, 100)">
-      <circle cx="2" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Next.js (App Router / SSR)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="102" height="9" rx="4.5" fill="url(#progPink)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#ff61d4">78%</text>
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff7b72"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Next.js (App Router, SSR)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="74" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">78%</text>
     </g>
     <!-- Node / Express -->
-    <g transform="translate(16, 126)">
-      <circle cx="2" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Node.js &amp; Express APIs</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="108" height="9" rx="4.5" fill="url(#progPink)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#ff61d4">83%</text>
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff7b72"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Node.js / Express Backend</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="79" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">83%</text>
     </g>
     <!-- Streamlit -->
-    <g transform="translate(16, 152)">
-      <circle cx="2" cy="-4" r="2.5" fill="#ff61d4" class="dot-pink"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Streamlit (AI Rapid Prototyping)</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="112" height="9" rx="4.5" fill="url(#progPink)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#ff61d4">86%</text>
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="2.5" fill="#ff7b72"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Streamlit (AI UI Prototyping)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="82" height="8" rx="4" fill="url(#barPink)"/>
+      <text x="355" y="-1" class="font-pct" fill="#ff7b72">86%</text>
     </g>
   </g>
 
-  <!-- 4. DATA SCIENCE & CLOUD DEVOPS (Bottom Right) -->
+  <!-- CARD 4: DATA SCIENCE & CLOUD (Bottom-Right) -->
   <g transform="translate(435, 236)">
-    <rect width="395" height="170" rx="10" fill="url(#cardBg)" stroke="#fbbf24" stroke-width="0.9" stroke-opacity="0.4"/>
-    <rect width="395" height="28" rx="10" fill="#fbbf24" opacity="0.1"/>
-    <rect y="14" width="395" height="14" fill="#fbbf24" opacity="0.1"/>
-    <circle cx="15" cy="14" r="3.5" fill="#ff5f57" opacity="0.9"/>
-    <circle cx="26" cy="14" r="3.5" fill="#febc2e" opacity="0.9"/>
-    <circle cx="37" cy="14" r="3.5" fill="#28c840" opacity="0.9"/>
-    <text x="210" y="18" text-anchor="middle" class="cat-title" fill="#fbbf24">DATA SCIENCE &amp; CLOUD</text>
+    <rect width="395" height="170" rx="8" fill="url(#cardBg)" stroke="#238636" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect width="395" height="26" rx="8" fill="#238636" opacity="0.12"/>
+    <rect y="13" width="395" height="13" fill="#238636" opacity="0.12"/>
+    <circle cx="14" cy="13" r="3" fill="#ff5f56"/>
+    <circle cx="24" cy="13" r="3" fill="#ffbd2e"/>
+    <circle cx="34" cy="13" r="3" fill="#27c93f"/>
+    <text x="205" y="17" text-anchor="middle" class="font-title" fill="#7ee787">DATA SCIENCE &amp; CLOUD</text>
 
     <!-- Pandas / NumPy -->
-    <g transform="translate(16, 48)">
-      <circle cx="2" cy="-4" r="2.5" fill="#fbbf24" class="dot-amber"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Pandas &amp; NumPy Analytics</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="118" height="9" rx="4.5" fill="url(#progAmber)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#fbbf24">90%</text>
+    <g transform="translate(14, 48)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7ee787"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Pandas &amp; NumPy Analytics</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="85" height="8" rx="4" fill="url(#barGreen)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">90%</text>
     </g>
     <!-- MongoDB / Redis -->
-    <g transform="translate(16, 74)">
-      <circle cx="2" cy="-4" r="2.5" fill="#fbbf24" class="dot-amber"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">MongoDB &amp; Redis Caching</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="110" height="9" rx="4.5" fill="url(#progAmber)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#fbbf24">85%</text>
+    <g transform="translate(14, 74)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7ee787"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">MongoDB &amp; Redis Caching</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="81" height="8" rx="4" fill="url(#barGreen)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">85%</text>
     </g>
-    <!-- Docker & Git -->
-    <g transform="translate(16, 100)">
-      <circle cx="2" cy="-4" r="2.5" fill="#fbbf24" class="dot-amber"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">Git, GitHub Actions &amp; Docker</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="115" height="9" rx="4.5" fill="url(#progAmber)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#fbbf24">88%</text>
+    <!-- Docker / Git -->
+    <g transform="translate(14, 100)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7ee787"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">Docker &amp; GitHub Actions</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="84" height="8" rx="4" fill="url(#barGreen)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">88%</text>
     </g>
-    <!-- EEIO-LCA & Groq Vision -->
-    <g transform="translate(16, 126)">
-      <circle cx="2" cy="-4" r="2.5" fill="#fbbf24" class="dot-amber"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">EEIO-LCA &amp; Groq Vision OCR</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="108" height="9" rx="4.5" fill="url(#progAmber)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#fbbf24">83%</text>
+    <!-- EEIO-LCA & Groq -->
+    <g transform="translate(14, 126)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7ee787"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">EEIO-LCA &amp; Groq Vision</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="79" height="8" rx="4" fill="url(#barGreen)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">83%</text>
     </g>
     <!-- AWS Cloud -->
-    <g transform="translate(16, 152)">
-      <circle cx="2" cy="-4" r="2.5" fill="#fbbf24" class="dot-amber"/>
-      <text x="12" y="0" class="skill-name" fill="#f1f5f9">AWS Certified AI Practitioner</text>
-      <rect x="200" y="-8" width="130" height="9" rx="4.5" fill="#1e293b"/>
-      <rect x="200" y="-8" width="100" height="9" rx="4.5" fill="url(#progAmber)" class="bar-anim"/>
-      <text x="340" y="-1" class="pct-label" fill="#fbbf24">77%</text>
+    <g transform="translate(14, 152)">
+      <circle cx="0" cy="-4" r="2.5" fill="#7ee787"/>
+      <text x="10" y="0" class="font-skill" fill="#e6edf3">AWS (AI Practitioner)</text>
+      <rect x="250" y="-8" width="95" height="8" rx="4" fill="#21262d"/>
+      <rect x="250" y="-8" width="73" height="8" rx="4" fill="url(#barGreen)"/>
+      <text x="355" y="-1" class="font-pct" fill="#7ee787">77%</text>
     </g>
   </g>
-
-  <!-- Ambient Outer Glow -->
-  <rect x="2" y="2" width="846" height="416" rx="12" fill="none" stroke="#00f5d4" stroke-width="0.5" opacity="0.2"/>
 </svg>

@@ -52,7 +52,15 @@
 
 ---
 
-### 🛠️ Technical Stack & Skills
+### 📊 Skills & Proficiency Breakdown
+
+<div align="center">
+  <img src="assets/skills-master.svg" width="100%" alt="Technologies I Master"/>
+</div>
+
+<br/>
+
+### 🛠️ Technical Stack & Frameworks
 
 <table>
   <tr>
