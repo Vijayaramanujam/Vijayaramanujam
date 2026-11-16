@@ -32,21 +32,49 @@
   <tr>
     <td width="22%" align="center" valign="middle">
       <img src="assets/avatar.png" width="160" style="border-radius: 50%; border: 3px solid #30363d;" alt="Vijayaramanujam"/>
-      <br/>
+      <br/><br/>
       <b>Vijayaramanujam N</b>
       <br/>
       <sub>Chennai, India</sub>
+      <br/>
+      <code>B.E. CSE @ CIT</code>
     </td>
     <td width="78%" valign="top">
-      <p>I am a <b>Computer Science Engineering student</b> at <b>Chennai Institute of Technology</b> (CGPA: <b>9.52 / 10</b>) and an <b>Aspiring AI Developer</b> passionate about engineering high-performance AI systems, multi-agent frameworks, and scalable cloud architectures.</p>
-      <ul>
-        <li>🔭 <b>Currently Building:</b> Enterprise Agentic AI platforms and automated carbon accounting tools.</li>
-        <li>🧠 <b>Core Focus:</b> RAG Pipelines, LLM Orchestration, Vector Search & Full-Stack Systems.</li>
-        <li>🏆 <b>Hackathons:</b> 1st Runner-Up at <i>One Earth International Hackathon</i> (among 5,000+ teams worldwide).</li>
-        <li>⚡ <b>Competitive Programming:</b> Solved <b>564+ problems on LeetCode</b> (Peak Rating: <b>1738</b>) and <b>200+ on CodeChef</b>.</li>
-        <li>🎙️ <b>Leadership:</b> Chief Communication Officer at <i>Asymmetric Club</i>; writer on Medium & host of tech podcasts on Spotify.</li>
-      </ul>
-    </td>
+
+```jsonc
+{
+  "$schema": "https://vijayaramanujam.dev/engineer.json",
+  "developer": "Vijayaramanujam N",
+  "education": {
+    "institution": "Chennai Institute of Technology",
+    "degree": "B.E. in Computer Science and Engineering",
+    "cgpa": 9.52
+  },
+  "role": "Aspiring AI Developer & Software Engineer",
+  "status": "Available for AI Research & SWE Internships",
+  "currentlyBuilding": [
+    "Enterprise Agentic AI Systems",
+    "Automated SME Carbon Accounting (CarbonIQ)"
+  ],
+  "coreFocus": [
+    "Multi-Agent Orchestration (Google ADK)",
+    "Modular RAG Pipelines & Vector Search",
+    "High-Performance Async Backends (FastAPI)"
+  ],
+  "competitiveRank": {
+    "leetCode": { "solved": "564+", "peakRating": 1738 },
+    "codeChef": { "solved": "200+", "rating": 1356 }
+  },
+  "hackathons": [
+    "🥈 1st Runner-Up · One Earth International (5,000+ teams)",
+    "🏆 Best UI/UX · HackOrbital 2026 (IIST, 75 teams)",
+    "🥈 Runner-Up · Pragyan AI Hackathon (NIT Trichy)"
+  ],
+  "leadership": "Chief Communication Officer @ Asymmetric Club"
+}
+```
+
+</td>
   </tr>
 </table>
 
